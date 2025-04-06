@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="SEKHO PROGRAMING KRNA" content="Learn about programming languages, web development, and coding techniques. Find tutorials on HTML, CSS, JavaScript, Python, and more.">
+    <meta name="PROGRAMING KA GYAN" content="Programming, Coding, HTML, CSS, JavaScript, Python, Java, C++, Web Development">
+    <meta name="HEMBABU" content="PROGRAMIG KA GYAN">
+    <title>Programming Gyan - Learn Coding & Web Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .menu-button {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .menu:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .services-list {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+        }
+        .services-list li {
+            padding: 5px 0;
+        }
+    </style>
+    <script>
+        function toggleServices() {
+            var list = document.getElementById("services-list");
+            if (list.style.display === "none" || list.style.display === "") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>PROGRAMMING GYAN</h1>
+        <div class="menu">
+            <button class="menu-button">⋮</button>
+            <div class="dropdown-content">
+                <a href="FRON.html">Home</a>
+                <a href="PYTHO.HTML" onclick="toggleServices()">ABOUT</a>
+                <a href="ABOUT.HTML">SERVICES</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>Programming Languages</h2>
+        <p>Explore various programming languages used to build websites, applications, and software.</p>
+        <ul>
+            <li><strong>HTML:</strong> The backbone of web development.</li>
+            <li><strong>CSS:</strong> Styles and beautifies web pages.</li>
+            <li><strong>JavaScript:</strong> Adds interactivity to websites.</li>
+            <li><strong>Python:</strong> Great for data science and web development.</li>
+            <li><strong>Java:</strong> Essential for enterprise applications.</li>
+            <li><strong>C++:</strong> Powers games and high-performance applications.</li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <h2>Services</h2>
+        <ul id="services-list" class="services-list">
+            <li>Web Development Tutorials</li>
+            <li>Python Programming Guides</li>
+            <li>JavaScript & React.js Training</li>
+            <li>SEO & Website Optimization</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>Owner: HEMRAJ SHARMA | YouTube: <a href="https://youtube.com/@dearteacher4537?si=3tQTbKYUUYAPPc_P" style="color: white;">Programming Gyan</a></p>
+    </div>
+</body>
+</html>

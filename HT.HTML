@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h1, h2 { color: #2c3e50; text-align: center; }
+        p, ul { line-height: 1.6; }
+        textarea { width: 100%; height: 100px; margin-top: 10px; }
+        iframe { width: 100%; height: 200px; margin-top: 10px; border: 1px solid #ccc; }
+        button { display: block; width: 100%; padding: 10px; margin-top: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML</h1>
+        <h2>Definition</h2>
+        <p>HTML (HyperText Markup Language) is the standard language used to create and design webpages.</p>
+        
+        <h2>Common HTML Tags with Examples</h2>
+        <ul>
+            <li><strong>&lt;p&gt;:</strong> Defines a paragraph. Example: <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></li>
+            <li><strong>&lt;h1&gt;-&lt;h6&gt;:</strong> Defines headings. Example: <code>&lt;h1&gt;Heading 1&lt;/h1&gt;</code></li>
+            <li><strong>&lt;a&gt;:</strong> Defines a hyperlink. Example: <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code></li>
+            <li><strong>&lt;img&gt;:</strong> Embeds an image. Example: <code>&lt;img src="image.jpg" alt="Example Image"&gt;</code></li>
+            <li><strong>&lt;table&gt;:</strong> Creates a table. Example: <code>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></li>
+        </ul>
+        
+        <h2>History of HTML</h2>
+        <p>HTML was developed by Tim Berners-Lee in 1991. Since then, it has evolved through multiple versions, with HTML5 being the latest standard.</p>
+        
+        <h2>HTML Practice Compiler</h2>
+        <textarea id="htmlCode" placeholder="Write your HTML code here..."></textarea>
+        <button onclick="runCode()">Run Code</button>
+        <iframe id="output"></iframe>
+    </div>
+
+    <script>
+        function runCode() {
+            var code = document.getElementById("htmlCode").value;
+            var output = document.getElementById("output").contentWindow.document;
+            output.open();
+            output.write(code);
+            output.close();
+        }
+    </script>
+</body>
+</html>
+

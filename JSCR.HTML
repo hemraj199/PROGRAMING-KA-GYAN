@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Guide</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f8f9fa; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h1, h2 { color: #2c3e50; text-align: center; }
+        p, ul { line-height: 1.6; }
+        textarea { width: 100%; height: 100px; margin-top: 10px; }
+        iframe { width: 100%; height: 200px; margin-top: 10px; border: 1px solid #ccc; }
+        button { display: block; width: 100%; padding: 10px; margin-top: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript</h1>
+        <h2>Definition</h2>
+        <p>JavaScript is a versatile programming language used to create dynamic and interactive content on websites.</p>
+        
+        <h2>Common JavaScript Methods with Examples</h2>
+        <ul>
+            <li><strong>document.getElementById:</strong> Selects an element by ID. Example: <code>document.getElementById('demo')</code></li>
+            <li><strong>console.log:</strong> Prints output to the console. Example: <code>console.log('Hello World');</code></li>
+            <li><strong>alert:</strong> Displays a popup message. Example: <code>alert('Welcome!');</code></li>
+            <li><strong>addEventListener:</strong> Attaches an event handler. Example: <code>element.addEventListener('click', function() {});</code></li>
+        </ul>
+        
+        <h2>History of JavaScript</h2>
+        <p>JavaScript was created by Brendan Eich in 1995 and has since evolved into one of the most widely used programming languages for web development.</p>
+        
+        <h2>JavaScript Practice Compiler</h2>
+        <textarea id="jsCode" placeholder="Write your JavaScript code here..."></textarea>
+        <button onclick="runJsCode()">Run Code</button>
+        <iframe id="jsOutput"></iframe>
+    </div>
+
+    <script>
+        function runJsCode() {
+            var jsCode = document.getElementById("jsCode").value;
+            var output = document.getElementById("jsOutput").contentWindow.document;
+            output.open();
+            output.write('<script>' + jsCode + '<\/script>');
+            output.close();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Hacker Console</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #0f0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #050505;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px #0f0;
+        }
+        h1, h2 {
+            text-align: center;
+            font-weight: bold;
+            color: #00ff00;
+            text-shadow: 0 0 8px #0f0;
+        }
+        .compiler {
+            margin-top: 20px;
+            padding: 20px;
+            background: #111;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #0f0;
+        }
+        textarea {
+            width: 100%;
+            height: 180px;
+            font-family: monospace;
+            padding: 12px;
+            background: #000;
+            color: #00ff00;
+            border: 2px solid #0f0;
+            border-radius: 6px;
+            outline: none;
+            font-size: 16px;
+        }
+        .output {
+            background: #000;
+            color: #00ff00;
+            padding: 12px;
+            height: 120px;
+            overflow-y: auto;
+            border: 2px solid #0f0;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 14px;
+            box-shadow: inset 0 0 10px #0f0;
+        }
+        .run-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #000;
+            color: #00ff00;
+            border: 2px solid #0f0;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.2s, background 0.3s;
+            animation: blink 0.7s infinite;
+        }
+        .run-btn:hover {
+            transform: scale(1.05);
+            background: #0f0;
+            color: #000;
+        }
+        @keyframes blink {
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PYTHON HACKER CONSOLE</h1>
+        <h2>Enter Your Python Code Below</h2>
+        <div class="compiler">
+            <textarea id="code" placeholder="print('Hello, Hacker!')"></textarea>
+            <button class="run-btn" onclick="runCode()">▶ EXECUTE</button>
+            <div class="output" id="output">[SYSTEM READY]</div>
+        </div>
+    </div>
+    <script>
+        function runCode() {
+            let code = document.getElementById("code").value;
+            let output = document.getElementById("output");
+            output.innerHTML = "[EXECUTING CODE...]";
+            fetch("https://emkc.org/api/v2/piston/execute", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ language: "python", version: "3.10.0", files: [{ content: code.trim() }] })
+            })
+            .then(response => response.text())
+            .then(text => {
+                try {
+                    let data = JSON.parse(text);
+                    output.innerHTML = data.run?.stdout || data.run?.stderr || "[NO OUTPUT]";
+                } catch (error) {
+                    output.innerHTML = "[ERROR PARSING RESPONSE]";
+                }
+            })
+            .catch(error => {
+                output.innerHTML = "[ERROR: " + error.message + "]";
+            });
+        }
+    </script>
+</body>
+</html>

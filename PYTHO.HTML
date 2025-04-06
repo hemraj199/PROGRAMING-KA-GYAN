@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMMING GYAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .menu-button {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .menu:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            text-align: left;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            padding: 8px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PROGRAMMING GYAN</h1>
+        <div class="menu">
+            <button class="menu-button">⋮</button>
+            <div class="dropdown-content">
+                <a href="FRON.html">Home</a>
+                <a href="ABOUT.HTML">Services</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h2>पाइथन क्या है (What is Python)?</h2>
+        <p>Python is a <mark>versatile</mark>, high-level, general-purpose programming language known for its readability and ease of use, developed by <mark>Guido van Rossum</mark> and first released in 1991.<br>It's widely used in various fields, including <mark>web development</mark>, <mark>data science</mark>, <mark>machine learning</mark>, and <mark>software development</mark>, thanks to its extensive libraries and frameworks.<br></p>
+        
+        <h3>Key Characteristics:</h3>
+        <ul>
+            <li><strong>Readability:</strong> Python emphasizes code readability with its clear and concise syntax, often described as "Pythonic".</li>
+            <li><strong>Dynamic Typing:</strong> Python is dynamically typed, meaning you don't need to declare the type of a variable; it's determined at runtime.</li>
+            <li><strong>Interpreted Language:</strong> Python is an interpreted language, meaning code is executed line by line, allowing for rapid prototyping and easier debugging.</li>
+            <li><strong>Object-Oriented Programming:</strong> Python supports <mark>object-oriented programming (OOP)</mark>, allowing you to structure code into objects with attributes and methods.</li>
+        </ul>
+
+        <h3>Python Syntax and Examples:</h3>
+        <ul>
+            <li><strong><mark>print()</mark>:</strong> Used to output text.<br>Syntax: <code>print("Hello, World!")</code></li>
+            <li><strong><mark>Variables</mark>:</strong> Used to store values.<br>Example: <code>x = 5</code></li>
+            <li><strong><mark>if-else</mark>:</strong> Conditional statement.<br>Example: <code>if x > 3:<br> print("Greater")<br> else:<br> print("Smaller")</code></li>
+            <li><strong><mark>Loops</mark>:</strong> Used for iteration.<br>Example: <code>for i in range(5):<br> print(i)</code></li>
+            <li><strong><mark>Functions</mark>:</strong> Define reusable code blocks.<br>Example: <code>def my_func():<br> print("Hello")</code></li>
+        </ul>
+      <h3> HOW CAN WE INSTALL PYTHON</h3>
+      <ul>
+        <li>
+          <mark>1. Python वेबसाइट से इंस्टॉलर डाउनलोड करें:</mark><br>
+          अपने वेब ब्राउज़र में <mark>Python.org</mark> पर जाएं.<br>
+          "Downloads" या "Download Python" पर क्लिक करें.<br>
+          अपने ऑपरेटिंग सिस्टम (Windows, macOS, या Linux) के लिए उपयुक्त इंस्टॉलर डाउनलोड करें.<br>
+          <br>
+          <mark>2. इंस्टॉलर चलाएं:</mark><br>
+          डाउनलोड किए गए इंस्टॉलर को डबल-क्लिक करें.<br>
+          इंस्टॉलेशन प्रक्रिया के दौरान निर्देशों का पालन करें.<br>
+          <mark>Windows पर:</mark> "Add Python to PATH" विकल्प को सक्षम करना महत्वपूर्ण है.<br>
+          <mark>macOS और Linux पर:</mark> डिफ़ॉल्ट इंस्टॉलेशन प्रक्रिया का पालन करें.<br>
+          <br>
+          <mark>3. इंस्टॉलेशन की जाँच करें:</mark><br>
+          कमांड लाइन या टर्मिनल खोलें.<br>
+          <code>python --version</code> या <code>python3 --version</code> टाइप करें.<br>
+          यदि Python का संस्करण दिखाई देता है, तो इंस्टॉलेशन सफल रहा है.<br>
+          <br>
+          <mark>4. (वैकल्पिक) PATH में Python जोड़ें:</mark><br>
+          Windows पर, "Environment Variables" में जाकर "Path" वेरिएबल में Python का इंस्टॉलेशन फोल्डर जोड़ें.<br>
+          macOS और Linux पर, अपने shell की कॉन्फ़िगरेशन फ़ाइल में Python का इंस्टॉलेशन फोल्डर जोड़ें.<br>
+        </li>
+      </ul>
+          </div>
+    
+    <div class="footer">
+        <p>Owner: HEMRAJ SHARMA | Instagram: <a href="https://www.instagram.com/ProgrammingGyan" target="_blank" style="color: white;">Programming Gyan</a></p>
+    </div>
+</body>
+</html>
